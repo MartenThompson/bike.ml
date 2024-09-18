@@ -6,41 +6,59 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9BD583322C9A9CA6005ED360 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD583312C9A9CA6005ED360 /* CoreMotion.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		9B7F893B2C9A92A400872DA4 /* PBXContainerItemProxy */ = {
+		9BD583132C9A9C80005ED360 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9B7F89222C9A92A300872DA4 /* Project object */;
+			containerPortal = 9BD582F42C9A9C7F005ED360 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9B7F89292C9A92A300872DA4;
+			remoteGlobalIDString = 9BD582FB2C9A9C7F005ED360;
 			remoteInfo = bike.ml;
 		};
-		9B7F89452C9A92A400872DA4 /* PBXContainerItemProxy */ = {
+		9BD5831D2C9A9C80005ED360 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9B7F89222C9A92A300872DA4 /* Project object */;
+			containerPortal = 9BD582F42C9A9C7F005ED360 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9B7F89292C9A92A300872DA4;
+			remoteGlobalIDString = 9BD582FB2C9A9C7F005ED360;
 			remoteInfo = bike.ml;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B7F892A2C9A92A300872DA4 /* bike.ml.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bike.ml.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B7F893A2C9A92A400872DA4 /* bike.mlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bike.mlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B7F89442C9A92A400872DA4 /* bike.mlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bike.mlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD582FC2C9A9C7F005ED360 /* bike.ml.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bike.ml.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD583122C9A9C80005ED360 /* bike.mlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bike.mlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD5831C2C9A9C80005ED360 /* bike.mlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bike.mlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD583312C9A9CA6005ED360 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9BD583242C9A9C80005ED360 /* Exceptions for "bike.ml" folder in "bike.ml" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9BD582FB2C9A9C7F005ED360 /* bike.ml */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9B7F892C2C9A92A300872DA4 /* bike.ml */ = {
+		9BD582FE2C9A9C7F005ED360 /* bike.ml */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9BD583242C9A9C80005ED360 /* Exceptions for "bike.ml" folder in "bike.ml" target */,
+			);
 			path = bike.ml;
 			sourceTree = "<group>";
 		};
-		9B7F893D2C9A92A400872DA4 /* bike.mlTests */ = {
+		9BD583152C9A9C80005ED360 /* bike.mlTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = bike.mlTests;
 			sourceTree = "<group>";
 		};
-		9B7F89472C9A92A400872DA4 /* bike.mlUITests */ = {
+		9BD5831F2C9A9C80005ED360 /* bike.mlUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = bike.mlUITests;
 			sourceTree = "<group>";
@@ -48,21 +66,22 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B7F89272C9A92A300872DA4 /* Frameworks */ = {
+		9BD582F92C9A9C7F005ED360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD583322C9A9CA6005ED360 /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD5830F2C9A9C80005ED360 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B7F89372C9A92A400872DA4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B7F89412C9A92A400872DA4 /* Frameworks */ = {
+		9BD583192C9A9C80005ED360 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,157 +91,166 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B7F89212C9A92A300872DA4 = {
+		9BD582F32C9A9C7F005ED360 = {
 			isa = PBXGroup;
 			children = (
-				9B7F892C2C9A92A300872DA4 /* bike.ml */,
-				9B7F893D2C9A92A400872DA4 /* bike.mlTests */,
-				9B7F89472C9A92A400872DA4 /* bike.mlUITests */,
-				9B7F892B2C9A92A300872DA4 /* Products */,
+				9BD582FE2C9A9C7F005ED360 /* bike.ml */,
+				9BD583152C9A9C80005ED360 /* bike.mlTests */,
+				9BD5831F2C9A9C80005ED360 /* bike.mlUITests */,
+				9BD583302C9A9CA6005ED360 /* Frameworks */,
+				9BD582FD2C9A9C7F005ED360 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9B7F892B2C9A92A300872DA4 /* Products */ = {
+		9BD582FD2C9A9C7F005ED360 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B7F892A2C9A92A300872DA4 /* bike.ml.app */,
-				9B7F893A2C9A92A400872DA4 /* bike.mlTests.xctest */,
-				9B7F89442C9A92A400872DA4 /* bike.mlUITests.xctest */,
+				9BD582FC2C9A9C7F005ED360 /* bike.ml.app */,
+				9BD583122C9A9C80005ED360 /* bike.mlTests.xctest */,
+				9BD5831C2C9A9C80005ED360 /* bike.mlUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9BD583302C9A9CA6005ED360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BD583312C9A9CA6005ED360 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B7F89292C9A92A300872DA4 /* bike.ml */ = {
+		9BD582FB2C9A9C7F005ED360 /* bike.ml */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B7F894E2C9A92A400872DA4 /* Build configuration list for PBXNativeTarget "bike.ml" */;
+			buildConfigurationList = 9BD583252C9A9C80005ED360 /* Build configuration list for PBXNativeTarget "bike.ml" */;
 			buildPhases = (
-				9B7F89262C9A92A300872DA4 /* Sources */,
-				9B7F89272C9A92A300872DA4 /* Frameworks */,
-				9B7F89282C9A92A300872DA4 /* Resources */,
+				9BD582F82C9A9C7F005ED360 /* Sources */,
+				9BD582F92C9A9C7F005ED360 /* Frameworks */,
+				9BD582FA2C9A9C7F005ED360 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9B7F892C2C9A92A300872DA4 /* bike.ml */,
+				9BD582FE2C9A9C7F005ED360 /* bike.ml */,
 			);
 			name = bike.ml;
 			packageProductDependencies = (
 			);
 			productName = bike.ml;
-			productReference = 9B7F892A2C9A92A300872DA4 /* bike.ml.app */;
+			productReference = 9BD582FC2C9A9C7F005ED360 /* bike.ml.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9B7F89392C9A92A400872DA4 /* bike.mlTests */ = {
+		9BD583112C9A9C80005ED360 /* bike.mlTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B7F89512C9A92A400872DA4 /* Build configuration list for PBXNativeTarget "bike.mlTests" */;
+			buildConfigurationList = 9BD5832A2C9A9C80005ED360 /* Build configuration list for PBXNativeTarget "bike.mlTests" */;
 			buildPhases = (
-				9B7F89362C9A92A400872DA4 /* Sources */,
-				9B7F89372C9A92A400872DA4 /* Frameworks */,
-				9B7F89382C9A92A400872DA4 /* Resources */,
+				9BD5830E2C9A9C80005ED360 /* Sources */,
+				9BD5830F2C9A9C80005ED360 /* Frameworks */,
+				9BD583102C9A9C80005ED360 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B7F893C2C9A92A400872DA4 /* PBXTargetDependency */,
+				9BD583142C9A9C80005ED360 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				9B7F893D2C9A92A400872DA4 /* bike.mlTests */,
+				9BD583152C9A9C80005ED360 /* bike.mlTests */,
 			);
 			name = bike.mlTests;
 			packageProductDependencies = (
 			);
 			productName = bike.mlTests;
-			productReference = 9B7F893A2C9A92A400872DA4 /* bike.mlTests.xctest */;
+			productReference = 9BD583122C9A9C80005ED360 /* bike.mlTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9B7F89432C9A92A400872DA4 /* bike.mlUITests */ = {
+		9BD5831B2C9A9C80005ED360 /* bike.mlUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B7F89542C9A92A400872DA4 /* Build configuration list for PBXNativeTarget "bike.mlUITests" */;
+			buildConfigurationList = 9BD5832D2C9A9C80005ED360 /* Build configuration list for PBXNativeTarget "bike.mlUITests" */;
 			buildPhases = (
-				9B7F89402C9A92A400872DA4 /* Sources */,
-				9B7F89412C9A92A400872DA4 /* Frameworks */,
-				9B7F89422C9A92A400872DA4 /* Resources */,
+				9BD583182C9A9C80005ED360 /* Sources */,
+				9BD583192C9A9C80005ED360 /* Frameworks */,
+				9BD5831A2C9A9C80005ED360 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B7F89462C9A92A400872DA4 /* PBXTargetDependency */,
+				9BD5831E2C9A9C80005ED360 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				9B7F89472C9A92A400872DA4 /* bike.mlUITests */,
+				9BD5831F2C9A9C80005ED360 /* bike.mlUITests */,
 			);
 			name = bike.mlUITests;
 			packageProductDependencies = (
 			);
 			productName = bike.mlUITests;
-			productReference = 9B7F89442C9A92A400872DA4 /* bike.mlUITests.xctest */;
+			productReference = 9BD5831C2C9A9C80005ED360 /* bike.mlUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9B7F89222C9A92A300872DA4 /* Project object */ = {
+		9BD582F42C9A9C7F005ED360 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					9B7F89292C9A92A300872DA4 = {
+					9BD582FB2C9A9C7F005ED360 = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					9B7F89392C9A92A400872DA4 = {
+					9BD583112C9A9C80005ED360 = {
 						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 9B7F89292C9A92A300872DA4;
+						TestTargetID = 9BD582FB2C9A9C7F005ED360;
 					};
-					9B7F89432C9A92A400872DA4 = {
+					9BD5831B2C9A9C80005ED360 = {
 						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 9B7F89292C9A92A300872DA4;
+						TestTargetID = 9BD582FB2C9A9C7F005ED360;
 					};
 				};
 			};
-			buildConfigurationList = 9B7F89252C9A92A300872DA4 /* Build configuration list for PBXProject "bike.ml" */;
+			buildConfigurationList = 9BD582F72C9A9C7F005ED360 /* Build configuration list for PBXProject "bike.ml" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9B7F89212C9A92A300872DA4;
+			mainGroup = 9BD582F32C9A9C7F005ED360;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9B7F892B2C9A92A300872DA4 /* Products */;
+			productRefGroup = 9BD582FD2C9A9C7F005ED360 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B7F89292C9A92A300872DA4 /* bike.ml */,
-				9B7F89392C9A92A400872DA4 /* bike.mlTests */,
-				9B7F89432C9A92A400872DA4 /* bike.mlUITests */,
+				9BD582FB2C9A9C7F005ED360 /* bike.ml */,
+				9BD583112C9A9C80005ED360 /* bike.mlTests */,
+				9BD5831B2C9A9C80005ED360 /* bike.mlUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B7F89282C9A92A300872DA4 /* Resources */ = {
+		9BD582FA2C9A9C7F005ED360 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B7F89382C9A92A400872DA4 /* Resources */ = {
+		9BD583102C9A9C80005ED360 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B7F89422C9A92A400872DA4 /* Resources */ = {
+		9BD5831A2C9A9C80005ED360 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +260,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B7F89262C9A92A300872DA4 /* Sources */ = {
+		9BD582F82C9A9C7F005ED360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B7F89362C9A92A400872DA4 /* Sources */ = {
+		9BD5830E2C9A9C80005ED360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B7F89402C9A92A400872DA4 /* Sources */ = {
+		9BD583182C9A9C80005ED360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +284,78 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B7F893C2C9A92A400872DA4 /* PBXTargetDependency */ = {
+		9BD583142C9A9C80005ED360 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B7F89292C9A92A300872DA4 /* bike.ml */;
-			targetProxy = 9B7F893B2C9A92A400872DA4 /* PBXContainerItemProxy */;
+			target = 9BD582FB2C9A9C7F005ED360 /* bike.ml */;
+			targetProxy = 9BD583132C9A9C80005ED360 /* PBXContainerItemProxy */;
 		};
-		9B7F89462C9A92A400872DA4 /* PBXTargetDependency */ = {
+		9BD5831E2C9A9C80005ED360 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B7F89292C9A92A300872DA4 /* bike.ml */;
-			targetProxy = 9B7F89452C9A92A400872DA4 /* PBXContainerItemProxy */;
+			target = 9BD582FB2C9A9C7F005ED360 /* bike.ml */;
+			targetProxy = 9BD5831D2C9A9C80005ED360 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		9B7F894C2C9A92A400872DA4 /* Debug */ = {
+		9BD583262C9A9C80005ED360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3F7FP7H6TT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bike.ml/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marten.bike-ml";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BD583272C9A9C80005ED360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3F7FP7H6TT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bike.ml/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marten.bike-ml";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BD583282C9A9C80005ED360 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		9B7F894D2C9A92A400872DA4 /* Release */ = {
+		9BD583292C9A9C80005ED360 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,63 +474,7 @@
 			};
 			name = Release;
 		};
-		9B7F894F2C9A92A400872DA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"bike.ml/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marten.bike-ml";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9B7F89502C9A92A400872DA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"bike.ml/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marten.bike-ml";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		9B7F89522C9A92A400872DA4 /* Debug */ = {
+		9BD5832B2C9A9C80005ED360 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,7 +492,7 @@
 			};
 			name = Debug;
 		};
-		9B7F89532C9A92A400872DA4 /* Release */ = {
+		9BD5832C2C9A9C80005ED360 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,7 +510,7 @@
 			};
 			name = Release;
 		};
-		9B7F89552C9A92A400872DA4 /* Debug */ = {
+		9BD5832E2C9A9C80005ED360 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -496,7 +526,7 @@
 			};
 			name = Debug;
 		};
-		9B7F89562C9A92A400872DA4 /* Release */ = {
+		9BD5832F2C9A9C80005ED360 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -515,43 +545,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B7F89252C9A92A300872DA4 /* Build configuration list for PBXProject "bike.ml" */ = {
+		9BD582F72C9A9C7F005ED360 /* Build configuration list for PBXProject "bike.ml" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B7F894C2C9A92A400872DA4 /* Debug */,
-				9B7F894D2C9A92A400872DA4 /* Release */,
+				9BD583282C9A9C80005ED360 /* Debug */,
+				9BD583292C9A9C80005ED360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B7F894E2C9A92A400872DA4 /* Build configuration list for PBXNativeTarget "bike.ml" */ = {
+		9BD583252C9A9C80005ED360 /* Build configuration list for PBXNativeTarget "bike.ml" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B7F894F2C9A92A400872DA4 /* Debug */,
-				9B7F89502C9A92A400872DA4 /* Release */,
+				9BD583262C9A9C80005ED360 /* Debug */,
+				9BD583272C9A9C80005ED360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B7F89512C9A92A400872DA4 /* Build configuration list for PBXNativeTarget "bike.mlTests" */ = {
+		9BD5832A2C9A9C80005ED360 /* Build configuration list for PBXNativeTarget "bike.mlTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B7F89522C9A92A400872DA4 /* Debug */,
-				9B7F89532C9A92A400872DA4 /* Release */,
+				9BD5832B2C9A9C80005ED360 /* Debug */,
+				9BD5832C2C9A9C80005ED360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B7F89542C9A92A400872DA4 /* Build configuration list for PBXNativeTarget "bike.mlUITests" */ = {
+		9BD5832D2C9A9C80005ED360 /* Build configuration list for PBXNativeTarget "bike.mlUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B7F89552C9A92A400872DA4 /* Debug */,
-				9B7F89562C9A92A400872DA4 /* Release */,
+				9BD5832E2C9A9C80005ED360 /* Debug */,
+				9BD5832F2C9A9C80005ED360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9B7F89222C9A92A300872DA4 /* Project object */;
+	rootObject = 9BD582F42C9A9C7F005ED360 /* Project object */;
 }
