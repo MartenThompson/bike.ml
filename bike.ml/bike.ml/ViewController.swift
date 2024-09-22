@@ -8,7 +8,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set up the file path for storing CSV data
         csvFilePath = createCSVFile()
 
         startRecordingMotionData()
@@ -22,9 +21,10 @@ class ViewController: UIViewController {
         let filePath = documentsDirectory.appendingPathComponent("motionData.csv")
 
         // Create the header row for the CSV file
-        let header = "timestamp,accel_x,accel_y,accel_y,gyro_x,gyro_y,gyro_z\n"
+        let header = "timestamp,accel_x,accel_y,accel_y,gyro_x,gyro_y,gyro_z,biking\n"
         do {
             try header.write(to: filePath, atomically: true, encoding: .utf8)
+            print("Created csv at \(filePath)")
         } catch {
             print("Error creating CSV file: \(error)")
             return nil
@@ -34,7 +34,9 @@ class ViewController: UIViewController {
 
     // Start recording accelerometer and gyroscope data
     func startRecordingMotionData() {
-        let update_interval = TimeInterval(1)
+        let update_interval = TimeInterval(0.2) // seconds
+        
+        // set the update interval for the accel & gyro, so when we get their values they're fresh
         if motionManager.isAccelerometerAvailable && motionManager.isGyroAvailable {
             motionManager.accelerometerUpdateInterval = update_interval
             motionManager.gyroUpdateInterval = update_interval
@@ -60,8 +62,10 @@ class ViewController: UIViewController {
         let rotationRate = gyroData.rotationRate
         let timestamp = Date().timeIntervalSince1970
 
+        let bikingState = bikingSwitch.isOn ? 1 : 0
+        
         // Format the data as a CSV row
-        let row = "\(timestamp),\(acceleration.x),\(acceleration.y),\(acceleration.z),\(rotationRate.x),\(rotationRate.y),\(rotationRate.z)\n"
+        let row = "\(timestamp),\(acceleration.x),\(acceleration.y),\(acceleration.z),\(rotationRate.x),\(rotationRate.y),\(rotationRate.z),\(bikingState)\n"
 
         // Append the row to the CSV file
         do {
@@ -76,17 +80,35 @@ class ViewController: UIViewController {
             print("Error writing to CSV file: \(error)")
         }
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    
+    func stopCollectingData() {
         motionManager.stopAccelerometerUpdates()
         motionManager.stopGyroUpdates()
         timer?.invalidate()
     }
+    @IBOutlet weak var bikingSwitch: UISwitch!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopCollectingData()
+    }
+    
 
     @IBAction func exportCSVButtonPressed(_ sender: UIButton) {
+        stopCollectingData()
+        
+        
         guard let filePath = csvFilePath else {
             print("No CSV file available to export.")
+            return
+        }
+        
+        // Check if the file exists at the file path
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: filePath.path) {
+            print("CSV file exists, ready to export.")
+        } else {
+            print("CSV file does not exist at \(filePath)")
             return
         }
 
