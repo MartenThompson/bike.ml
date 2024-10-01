@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let filePath = documentsDirectory.appendingPathComponent("motionData.csv")
 
         // Create the header row for the CSV file
-        let header = "timestamp,accel_x,accel_y,accel_y,gyro_x,gyro_y,gyro_z,biking\n"
+        let header = "ms1970,timestamp,accel_x,accel_y,accel_y,gyro_x,gyro_y,gyro_z,biking\n"
         do {
             try header.write(to: filePath, atomically: true, encoding: .utf8)
             print("Created csv at \(filePath)")
@@ -61,11 +61,12 @@ class ViewController: UIViewController {
         let acceleration = accelerometerData.acceleration
         let rotationRate = gyroData.rotationRate
         let timestamp = Date().timeIntervalSince1970
-
+        let time_readable = NSDate(timeIntervalSince1970: timestamp)
+        
         let bikingState = bikingSwitch.isOn ? 1 : 0
         
         // Format the data as a CSV row
-        let row = "\(timestamp),\(acceleration.x),\(acceleration.y),\(acceleration.z),\(rotationRate.x),\(rotationRate.y),\(rotationRate.z),\(bikingState)\n"
+        let row = "\(timestamp),\(time_readable),\(acceleration.x),\(acceleration.y),\(acceleration.z),\(rotationRate.x),\(rotationRate.y),\(rotationRate.z),\(bikingState)\n"
 
         // Append the row to the CSV file
         do {
@@ -75,7 +76,7 @@ class ViewController: UIViewController {
                 fileHandle.write(rowData)
             }
             fileHandle.closeFile()
-            print("Wrote to file")
+            print("Wrote \(time_readable) to file")
         } catch {
             print("Error writing to CSV file: \(error)")
         }
