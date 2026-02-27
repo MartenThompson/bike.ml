@@ -7,22 +7,24 @@ struct ExportSessionsView: View {
 
     var body: some View {
         List {
-            ForEach(viewModel.exportableFiles, id: \.self) { url in
-                Button {
-                    selectedFile = url
-                    isShareSheetPresented = true
-                } label: {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(url.lastPathComponent)
-                                .lineLimit(1)
-                            Text(urlFormattedDate(url: url) ?? "")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
+            Section {
+                ForEach(viewModel.exportableFiles, id: \.self) { url in
+                    Button {
+                        selectedFile = url
+                        isShareSheetPresented = true
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(url.lastPathComponent)
+                                    .lineLimit(1)
+                                Text(urlFormattedDate(url: url) ?? "")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            Image(systemName: "square.and.arrow.up")
+                                .foregroundStyle(.accent)
                         }
-                        Spacer()
-                        Image(systemName: "square.and.arrow.up")
-                            .foregroundStyle(.accent)
                     }
                 }
             }
@@ -33,7 +35,9 @@ struct ExportSessionsView: View {
         }
         .sheet(isPresented: $isShareSheetPresented) {
             if let fileURL = selectedFile {
-                ShareSheet(activityItems: [fileURL])
+                ShareSheet(activityItems: [fileURL] as [Any])
+            } else {
+                EmptyView()
             }
         }
     }

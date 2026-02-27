@@ -1,6 +1,15 @@
 import Foundation
+import UIKit
 import CoreMotion
 import CoreLocation
+
+enum SessionLabel: String, CaseIterable, Identifiable, Codable {
+    case biking
+    case notBiking
+    case unknown
+
+    var id: String { rawValue }
+}
 
 struct MotionSample: Codable {
     let timestamp: TimeInterval
