@@ -2,11 +2,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, World! Let's go.")
-                .font(.title)
+        NavigationStack {
+            List {
+                NavigationLink("Training") {
+                    TrainingView()
+                }
+                NavigationLink("Operation") {
+                    OperationView()
+                }
+            }
+            .navigationTitle("Bike Tracking")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
