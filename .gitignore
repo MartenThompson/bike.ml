@@ -1,0 +1,15 @@
+# Python / notebooks
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local data and models
+data/
+models/*.pkl
+
+# Xcode / iOS
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+
