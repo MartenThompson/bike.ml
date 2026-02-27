@@ -1,5 +1,4 @@
 import XCTest
-@testable import BikeLogger
 
 final class BikeLoggerTests: XCTestCase {
     func testDetectionEngineStats() throws {
