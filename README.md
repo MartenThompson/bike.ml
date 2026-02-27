@@ -19,7 +19,7 @@ This is a personal project, not commercial endeavor.
 The project has three main components:
 
 1. iOS data logger  
-   A Swift/SwiftUI app that records motion data (accelerometer, gyroscope, etc.) and labels (biking vs. not biking). This app stores logs locally and can export them via standard iOS sharing mechanisms (e.g., Files, AirDrop).
+   A Swift/SwiftUI app that records motion data (accelerometer, gyroscope, etc.) and allows the user to label it biking vs. not biking. This app stores logs locally and can export them via standard iOS sharing mechanisms (e.g., Files, AirDrop).
 2. ML playground  
    A Python-based environment for ingesting exported logs, cleaning data, engineering features, training models, and benchmarking their performance.
 3. On-device detector  
