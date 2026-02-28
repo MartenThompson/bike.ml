@@ -10,6 +10,8 @@ final class TrainingRecorder: ObservableObject {
     @Published private(set) var lastSavedURL: URL?
     /// Set when Start is tapped but motion hardware isn't available (e.g. simulator).
     @Published var showMotionUnavailableAlert = false
+    /// Saved training CSV files in Documents (newest first). Refresh with refreshSavedFiles().
+    @Published private(set) var savedFileURLs: [URL] = []
 
     private let motionManager = CMMotionManager()
     private let queue = OperationQueue()
@@ -18,6 +20,7 @@ final class TrainingRecorder: ObservableObject {
 
     func startRecording() {
         guard !isRecording else { return }
+        print("[TrainingRecorder] Start collecting tapped")
         if !motionManager.isDeviceMotionAvailable {
             showMotionUnavailableAlert = true
             return
@@ -44,6 +47,7 @@ final class TrainingRecorder: ObservableObject {
 
     func stopRecording() {
         guard isRecording else { return }
+        print("[TrainingRecorder] Stop collecting tapped")
         motionManager.stopDeviceMotionUpdates()
         isRecording = false
 
@@ -65,5 +69,19 @@ final class TrainingRecorder: ObservableObject {
         try? csv.write(to: url, atomically: true, encoding: .utf8)
         lastSavedURL = url
         sampleCount = 0
+        refreshSavedFiles()
+    }
+
+    /// Scans Documents for training_data_*.csv and updates savedFileURLs (newest first).
+    func refreshSavedFiles() {
+        guard let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        let contents = (try? FileManager.default.contentsOfDirectory(at: docs, includingPropertiesForKeys: [.contentModificationDateKey], options: .skipsHiddenFiles)) ?? []
+        savedFileURLs = contents
+            .filter { $0.lastPathComponent.hasPrefix("training_data_") && $0.pathExtension == "csv" }
+            .sorted { a, b in
+                let t1 = (try? a.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate) ?? .distantPast
+                let t2 = (try? b.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate) ?? .distantPast
+                return t1 > t2
+            }
     }
 }
