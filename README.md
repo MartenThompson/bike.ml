@@ -217,3 +217,7 @@ Final deployed state
 
 Training model
 - minimal inputs, just accel/gyro. 
+
+XCode stuff
+- enable the Location background mode in Xcode (Target → Signing  Capabilities → + Capability → Background Modes → Location), and/or add location to UIBackgroundModes in Info.plist.
+- need motion usage (and location usage if you use it) in Info.plist so the system can show the right permission strings.
