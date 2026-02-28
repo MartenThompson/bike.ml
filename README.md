@@ -206,3 +206,14 @@ This repository currently contains documentation and will be extended with:
 - Exported models and metadata under `models/`.
 
 Implementation will follow the phased plan described above.
+
+
+## Planning
+
+Final deployed state
+- binary classifier
+- wrapped in business logic 
+  - e.g. $N$ consecutive positive predictions $\rightarrow$ we are biking, start collecting GPS, deriving speed, etc.
+
+Training model
+- minimal inputs, just accel/gyro. 
