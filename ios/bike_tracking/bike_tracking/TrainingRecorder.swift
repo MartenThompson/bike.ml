@@ -25,6 +25,7 @@ final class TrainingRecorder: ObservableObject {
             showMotionUnavailableAlert = true
             return
         }
+        isBiking = false
         rows = []
         sampleCount = 0
         lastSavedURL = nil
@@ -69,6 +70,12 @@ final class TrainingRecorder: ObservableObject {
         try? csv.write(to: url, atomically: true, encoding: .utf8)
         lastSavedURL = url
         sampleCount = 0
+        refreshSavedFiles()
+    }
+
+    /// Deletes a saved file from Documents and refreshes the list.
+    func deleteSavedFile(at url: URL) {
+        try? FileManager.default.removeItem(at: url)
         refreshSavedFiles()
     }
 

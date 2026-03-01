@@ -74,6 +74,15 @@ struct TrainingView: View {
                                 }
                             }
                         }
+                        .onDelete { indexSet in
+                            let urlsToDelete = indexSet.compactMap { index -> URL? in
+                                guard index < recorder.savedFileURLs.count else { return nil }
+                                return recorder.savedFileURLs[index]
+                            }
+                            for url in urlsToDelete {
+                                recorder.deleteSavedFile(at: url)
+                            }
+                        }
                     }
                     .listStyle(.plain)
                     .frame(maxHeight: 200)
